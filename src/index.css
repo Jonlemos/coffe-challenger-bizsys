@@ -95,10 +95,10 @@ table {
 }
 
 body, html{
-  background-color: ;
+  background-color: var(--secondary) ;
 }
 
 :root{
-  --primary: #00b0b6;
-  --secondary: #363636ba;
+  --primary: #64b29f;
+  --secondary: #42454e;
 }
