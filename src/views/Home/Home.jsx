@@ -1,7 +1,13 @@
 import React from 'react'
+import Box from './../../components/Box/Box'
 
-export default Home = () =>(
+const Home = () =>(
     <>
-        <h1>Café Expresso</h1>
+        <Box>
+            <h1>Café Expresso</h1>
+        </Box>    
+        
     </>
 )
+
+export default Home

@@ -1,5 +1,5 @@
-import Home from './Home'
-import CoffeRequest from './CoffeRequest'
+import Home from './Home/Home.jsx'
+import CoffeRequest from './CoffeRequest/CoffeRequest.jsx'
 
 export {
     Home,

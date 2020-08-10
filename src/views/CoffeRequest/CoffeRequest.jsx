@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default CoffeRequest = () =>(
+const CoffeRequest = () =>(
     <>
         <h1>Café Expresso</h1>
     </>
 )
+
+export default CoffeRequest
