@@ -1,16 +1,22 @@
 .box{
     position: relative;
     margin: 5% auto;
-    width: 90%;
+    width: 80%;
     height: 75vh;
-    background-color: black ;
+    border: 3px solid #7f7f7f;
 }
 
 .effect-1{
     position: absolute;
-    height: 150px;
-    width: 150px;
+    height: 205px;
+    width: 210px;
     background-color: #3f404a;
+    right: -135px;
+    top: 120px;
+    border-radius: 100px;
+    transform: rotate(40deg);
+    clip-path: polygon(0 0, -9% 0, 73% 100%, 0 100%);
+    /* box-shadow: 10px 8px 9px 9px rgb(59, 59, 59) */
 }
 .effect-2{
     position: absolute;
