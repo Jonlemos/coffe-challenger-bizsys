@@ -51,7 +51,7 @@
       background: var(--secondary);
       border: #4c9d8a 1px solid;
       section:nth-child(1) {
-        height: 50%;
+        min-height: 50%;
       }
       p {
         font-size: 15px;

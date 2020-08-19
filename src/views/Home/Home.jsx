@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Box from "../../components/Box/Box";
 import qrCode from "../../assets/images/qrcode.png";
 import "./Home.scss";
 
+import { CoffeeRequestContext } from "../../contexts/CoffeeRequestContext";
+
 const Home = () => {
-  const [preparing, setPreparing] = useState([]);
-  const [ready, setReady] = useState([]);
-  const [data, setData] = useState([]);
+  const { clients, setClients } = useContext(CoffeeRequestContext);
 
   return (
     <Box>
@@ -33,33 +33,39 @@ const Home = () => {
           <div className="card2">
             <section>
               <p>Venha retirar seu pedido</p>
-              {/* {data.map((item) => (
-                <h1 className="text-client" key={String(item.id)}>
-                  {item.name}
-                </h1>
-              ))} */}
-              <h1>Jonathan</h1>
+              {clients.map(
+                (item) =>
+                  item.status === 1 && (
+                    <h1 className="text-client" key={item.id}>
+                      {item.name}
+                    </h1>
+                  )
+              )}
             </section>
 
             <section className="text-done">
               <div>
                 <p>Preparação</p>
-                {/* {preparing.map((item) => (
-                  <p className="text-client2" key={String(item.id)}>
-                    {item.name}
-                  </p>
-                ))} */}
-                <h4>Felipe</h4>
+                {clients.map(
+                  (item) =>
+                    item.status === 2 && (
+                      <h4 className="text-client2" key={item.id}>
+                        {item.name}
+                      </h4>
+                    )
+                )}
               </div>
 
               <div>
                 <p>Prontos</p>
-                {/* {ready.map((item) => (
-                  <p className="text-client2" key={String(item.id)}>
-                    {item.name}
-                  </p>
-                ))} */}
-                <h4>Rafael</h4>
+                {clients.map(
+                  (item) =>
+                    item.status === 3 && (
+                      <h4 className="text-client2" key={String(item.id)}>
+                        {item.name}
+                      </h4>
+                    )
+                )}
               </div>
             </section>
           </div>

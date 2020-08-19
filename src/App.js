@@ -1,4 +1,10 @@
 import React from "react";
 import Routes from "./routes";
 
-export default () => <Routes />;
+import CoffeeRequestProvider from "./contexts/CoffeeRequestContext";
+
+export default () => (
+  <CoffeeRequestProvider>
+    <Routes />
+  </CoffeeRequestProvider>
+);

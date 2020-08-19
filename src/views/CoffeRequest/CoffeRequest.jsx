@@ -1,28 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "./CoffeeRequest.scss";
 import Icon from "@mdi/react";
 import { mdiArrowRight } from "@mdi/js";
 
+import { CoffeeRequestContext } from "../../contexts/CoffeeRequestContext";
+
 export default () => {
   const [counter, setCounter] = useState(1);
 
+  const { push } = useHistory();
+
+  const { clients, setClients } = useContext(CoffeeRequestContext);
+
   const { register, handleSubmit, errors } = useForm();
 
-  const submitForm = (data) => {
+  const handleSubmitForm = (data) => {
     const { name, email, tel } = data;
-    const coffee = "Café Expresso";
-    const amount = counter;
-    const status = "1";
 
     const dataSend = {
+      id: clients.length + 1,
       name,
       email,
       tel,
-      coffee,
-      amount,
-      status,
+      amount: counter,
+      status: 1,
     };
+
+    setClients([...clients, dataSend]);
+
+    push("/");
   };
 
   const handleButtonMin = () => {
@@ -52,7 +60,7 @@ export default () => {
         </div>
       </header>
 
-      <form onSubmit={handleSubmit(submitForm)}>
+      <form onSubmit={handleSubmit(handleSubmitForm)}>
         <div className="form-div">
           <input
             placeholder="Nome"
