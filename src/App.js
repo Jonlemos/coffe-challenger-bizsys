@@ -1,12 +1,4 @@
-import React from 'react';
-import {Home} from './views/index'
+import React from "react";
+import Routes from "./routes";
 
-function App() {
-  return (
-    <div className="App">
-      <Home/>
-    </div>
-  );
-}
-
-export default App;
+export default () => <Routes />;
