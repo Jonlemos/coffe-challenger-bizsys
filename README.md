@@ -10,7 +10,7 @@ React, javascript
 ### Tecnologias utilizadas
 React-router, Material-DesingIcons, React Hook Form, Preetier, sass.
 
-###Iniciar Projeto
+### Iniciar Projeto
 Para inicializar o projeto é necessário instalar as dependências
 
 ```sh
@@ -32,7 +32,7 @@ yarn start
 ```
 Com isso abrirá a página na url http://localhost:3000/
 
-###Utilizando a Aplicação
+### Utilizando a Aplicação
 Página da empresa será:
 http://localhost:3000/
 Nessa pagina pode se visualizar os pedidos feitos.
